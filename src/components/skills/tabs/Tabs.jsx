@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import Button from "../../button/Button";
 
 const Tabs = () => {
@@ -8,35 +7,36 @@ const Tabs = () => {
     {
       title: "Frontend",
       content: [
-        { name: "React.js", experties: "75" },
-        { name: "JavaScript", experties: "76" },
-        { name: "Tailwind CSS", experties: "85" },
-        { name: "HTML5", experties: "95" },
-        { name: "CSS3", experties: "86" },
-        { name: "Bootstrap5", experties: "70" },
+        { id: 1, name: "React.js", experties: 75 },
+        { id: 2, name: "JavaScript", experties: 76 },
+        { id: 3, name: "Tailwind CSS", experties: 85 },
+        { id: 4, name: "HTML5", experties: 95 },
+        { id: 5, name: "CSS3", experties: 86 },
+        { id: 6, name: "Bootstrap5", experties: 70 },
       ],
     },
     {
       title: "Backend",
       content: [
-        { name: "Nood.js", experties: "60" },
-        { name: "Express.js", experties: "65" },
+        { id: 7, name: "Nood.js", experties: 48 },
+        { id: 8, name: "Express.js", experties: 50 },
+        { id: 9, name: "Mongo DB", experties: 55 },
       ],
     },
     {
       title: "Tools",
       content: [
-        { name: "Git & GitHub", experties: "85" },
-        { name: "Visual Studio Code", experties: "75" },
-        { name: "Vite", experties: "70" },
+        { id: 10, name: "Git & GitHub", experties: 85 },
+        { id: 11, name: "Visual Studio Code", experties: 80 },
+        { id: 12, name: "Vite", experties: 70 },
       ],
     },
     {
       title: "Soft Skills",
       content: [
-        { name: "Problem Solving", experties: "80" },
-        { name: "Collaboration", experties: "85" },
-        { name: "Attention to Detail", experties: "90" },
+        { id: 13, name: "Problem Solving", experties: 80 },
+        { id: 14, name: "Collaboration", experties: 85 },
+        { id: 15, name: "Attention to Detail", experties: 90 },
       ],
     },
   ];
@@ -45,8 +45,8 @@ const Tabs = () => {
     // console.log(index);
   };
   return (
-    <section className="mt-14 mb-12 flex flex-col gap-6 lg:gap-0 lg:flex-row ">
-      <div className="lg:w-3/6 py-8  flex flex-col gap-8 justify-center items-center text-center lg:text-left lg:items-start md:py-0">
+    <section className="mt-10 mb-12 h-[70%] flex flex-col gap-6 lg:gap-0 lg:flex-row ">
+      <div className="lg:w-3/6 py-8  flex flex-col gap-8 justify-center items-center text-center lg:text-left lg:items-start md:py-0 md:pr-10">
         <div
           className={`grid grid-cols-1 lg:grid-cols-2 gap-2 w-full lg:justify-center bg-primary-light py-4 rounded-lg text-primary `}
         >
@@ -66,17 +66,39 @@ const Tabs = () => {
         </div>
       </div>
       {/* content starts  */}
-      <div className="lg:w-3/6 flex justify-center relative border-[5px] border-primary ">
-        <div className="grid w-full grid-cols-1 gap-6 pt-5 justify-start">
+      <div className="lg:w-3/6 flex justify-center relative border-[5px] border-primary rounded-lg ">
+        <div className="flex w-full flex-col gap-6 py-2  justify-start">
           {skills.map((title, index) => {
             if (index === tabState) {
-              return title.content.map((item, index) => {
-                return (
-                  <div key={index} className="bg-primary ">
-                    {item.name}
+              return (
+                <div key={index}>
+                  <div className="text-2xl border-b-[5px] border-primary pb-2 px-5">
+                    {title.title}
                   </div>
-                );
-              });
+
+                  {title.content.map((item) => {
+                    return (
+                      <div key={item.id} className="relative px-5 pt-5">
+                        <h2>
+                          {item.name}
+                          <span
+                            className="absolute "
+                            style={{ left: `${item.experties - 8}%` }}
+                          >
+                            {item.experties}%
+                          </span>
+                        </h2>
+                        <div className="block w-full h-2 mt-[6px] bg-primary/40 rounded-full relative">
+                          <div
+                            className={`block bg-primary  h-2 rounded-full`}
+                            style={{ width: item.experties + "%" }}
+                          ></div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
             } else {
               return;
             }
