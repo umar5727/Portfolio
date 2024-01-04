@@ -4,6 +4,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Layout from './Layout'
 import Home from './pages/Home'
 import { Skills } from './components'
+import NavContextProvider from './components/context/navcontext/NavContextProvider'
 
 
 function App() {
@@ -21,11 +22,11 @@ function App() {
 
 
   return (
-    <>
+    <NavContextProvider>
       <RouterProvider router={router} />
 
       
-    </>
+    </NavContextProvider>
   )
 }
 

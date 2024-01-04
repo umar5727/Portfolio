@@ -5,7 +5,9 @@ import React from "react";
 import Button from "./button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faCss3,
   faGithub,
+  faHtml5,
   faInstagram,
   faLinkedinIn,
   faReact,
@@ -15,51 +17,92 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col gap-6 lg:gap-0 lg:flex-row py-10">
+    <section className="flex flex-col gap-6 lg:gap-0 lg:flex-row py-10 lg:h-[calc(100vh-64px)]">
       {/* Left Column */}
-      <div className="lg:w-3/6 py-8  flex flex-col gap-8 justify-center items-center text-center lg:text-left lg:items-start md:py-0">
-        <h1 className="text-4xl md:text-6xl font-bold  text-primary ">
-          <span className="text-black dark:text-white">Hy! I'm </span> <br />
-          Umar Khan
+      {/* <div className="absolute top-1/2 left-[20%] shadow-[0_0_200px_200px_rgba(0,255,168,0.55)] -z-50"></div> */}
+      <div className="lg:w-3/6 flex flex-col gap-8 justify-center items-center text-center lg:text-left lg:items-start md:py-0">
+        <h1 className="text-4xl md:text-6xl font-bold  text-primary font-serif lg:mt-9">
+          <span className="text-black dark:text-white text-3xl md:text-5xl ">Hy! I'm </span> <br />
+          <div className="relative pt-2 drop-shadow-[1px_1px_rgba(255,255,255,9.5)]">Umar Khan</div>
         </h1>
-        <p className="text-lg font-medium md:text-xl  text-primary-text-normal dark:text-primary-text-normal-dark">
-        A dedicated React.js Developer with a passion for crafting dynamic and efficient web applications. With a solid foundation in modern JavaScript and a keen eye for creating seamless user experiences, I bring ideas to life through the power of React.js.
-        
+        <p className="text-lg md:text-xl font-bold text-primary dark:!text-lightgray">
+          A dedicated React.js Developer with a passion for crafting dynamic and
+          efficient web applications. I bring ideas to life through the power of
+          React.js.
         </p>
         {/* discription ends  */}
-        <div className="flex gap-4 text-primary">
-          <Link>
-          
-            <FontAwesomeIcon icon={faGithub} className="w-6 h-6 dark:text-white" />
+        {/* <div className="flex gap-10 ">
+          <Button className="px-12 py-3 ">
+            <span className="z-50">Download CV</span>
+          </Button>
+          <Button>
+            <span className="z-50">Project Completed</span>
+          </Button>
+        </div> */}
+        {/* social links */}
+        <div className="flex gap-10 text-primary lg:mt-16">
+          <Link className="duration-500 hover:-translate-y-2">
+            <FontAwesomeIcon
+              icon={faGithub}
+              className=" duration-300 dark:text-white text-5xl dark:hover:text-primary"
+            />
           </Link>
-          <Link>
-            <FontAwesomeIcon icon={faLinkedinIn} className="w-6 h-6 dark:text-white" />
+          <Link className="duration-500 hover:-translate-y-2">
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className=" duration-300 dark:text-white text-5xl dark:hover:text-primary"
+            />
           </Link>
-          <Link>
-            <FontAwesomeIcon icon={faInstagram} className="w-6 h-6 dark:text-white" />
+          <Link className="duration-500 hover:-translate-y-2 ">
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className=" duration-300 dark:text-white text-5xl dark:hover:text-primary"
+            />
           </Link>
-          
         </div>
 
-        <Button>Hire me</Button>
+        {/* <Button>Hire me</Button> */}
       </div>
 
       {/* Right Column - Full Image */}
-      {/* {const image =<FontAwesomeIcon icon={faReact} />} */}
+      
       <div className="lg:w-3/6 flex justify-center relative ">
-        <SmallCard icon={faReact} iconStyle='text-primary' className="absolute -right-10" text='React Developer'/>
+        
+        {/* small cards starts  */}
+        <SmallCard
+          icon={faReact}
+          iconStyle="text-[#00d1f7]"
+          className="absolute top-5 -right-10"
+        />
+        <SmallCard
+          icon={faHtml5}
+          iconStyle="text-yellow-600"
+          className="absolute top-10 right-20"
+        />
+        <SmallCard
+          icon={faCss3}
+          iconStyle="text-blue-600"
+          className="absolute top-40 right-20"
+        />
+         {/* <SmallCard
+          icon={}
+          iconStyle="text-blue-600"
+          className="absolute top-40 right-20"
+        /> */}
+        {/* small cards ends  */}
+
         <div className="relative  ">
-          {/* <figure className=" absolute -left-28 -bottom-12 figure z-0">
+          <figure className=" absolute -left-[16rem] -bottom-[4.5rem] figure -z-50 w-[900px]">
             <img
-              src="figure.svg"
+              src="figure2.svg"
               alt=""
               className="w-full h-full z-0 relative"
             />
-          </figure> */}
+          </figure>
           <img
             src="self1.png"
             alt=""
-            className="mainImg w-full h-[550px] z-40 relative "
+            className="mainImg w-full h-[550px] z-40 relative rounded-b-full"
           />
         </div>
       </div>
