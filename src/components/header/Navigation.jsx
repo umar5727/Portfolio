@@ -28,26 +28,26 @@ const Navigation = () => {
 
   return (
     <>
-    <ul
-      className={`navShadow w-full text-primary font-bold lg:gap-1 overflow-hidden absolute top-16 left-0  z-50 ${className} md:shadow-none md:w-auto md:py-2 md:px-4 md:flex md:static md:h-auto md:items-center xl:text-lg transition-height duration-300 z-50 bg-gray-200 dark:bg-gray-950 md:bg-transparent md:dark:bg-transparent`}
-    >
-      {navItems.map((item, index) => (
-        <Link
-        to={item.slug}
-        smooth={true}
-          key={index}
-          className="group block px-7  py-3 rounded-full text-primary dark:text-[rgb(211,211,211)] hover:scale-110 dark:hover:text-white cursor-pointer ${liClass} transition-all duration-300 dark:text-dark-nav "
-        >
-          <li
-            className={`relative w-fit before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-1 before:w-0 before:h-1 before:bg-primary before:duration-300 group-hover:before:w-full`}
-            onClick={HandleClick}
+      <ul
+        className={`navShadow w-full text-primary font-bold lg:gap-1 overflow-hidden absolute top-16 left-0 z-50 ${className} lg:shadow-none lg:w-auto lg:py-2 lg:px-4 lg:flex lg:static lg:h-auto lg:items-center xl:text-lg transition-height duration-300 z-50 bg-gray-200 dark:bg-gray-950 lg:bg-transparent lg:dark:bg-transparent`}
+      >
+        {navItems.map((item, index) => (
+          <Link
+            to={item.slug}
+            smooth={true}
+            key={index}
+            className="group block px-7  py-3 rounded-full text-primary dark:text-[rgb(211,211,211)] hover:scale-110 dark:hover:text-white cursor-pointer ${liClass} transition-all duration-300 dark:text-dark-nav "
           >
-            {item.name}
-          </li>
-        </Link>
-      ))}
-    </ul>
-      </>
+            <li
+              className={`relative w-fit before:absolute before:left-1/2 before:-translate-x-1/2 before:-bottom-1 before:w-0 before:h-1 before:bg-primary before:duration-300 group-hover:before:w-full`}
+              onClick={HandleClick}
+            >
+              {item.name}
+            </li>
+          </Link>
+        ))}
+      </ul>
+    </>
   );
 };
 

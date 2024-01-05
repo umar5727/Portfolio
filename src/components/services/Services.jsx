@@ -10,17 +10,16 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="flex flex-col gap-6  py-20 lg:h-[100vh] text-center"
+      className="flex flex-col gap-6  pt-14 lg:h-[100vh] text-center"
     >
       {/* Left Column */}
       <div className="lg:w-full lg:text-center py-8  flex flex-col gap-8 justify-center items-center text-center  lg:items-center md:py-0">
         <H2 className="text-4xl md:text-6xl font-bold  text-primary ">
-          <span className="text-black text-3xl md:text-5xl dark:text-white">
-            {" "}
-            My Awesome{" "}
+          <span className="text-black text-3xl md:text-5xl dark:text-white">            
+            My Awesome
           </span>
-          <br />
-          <span className="text-primary">Services</span>
+          
+          <span className="text-primary"> Services</span>
         </H2>
         <p className="text-lg  md:text-xl  text-primary-text-normal dark:text-primary-text-normal-dark">
           Feel free to explore my portfolio to see more of my work. If you have
@@ -29,9 +28,7 @@ const Services = () => {
         </p>
         {/* discription ends  */}
 
-        <Button>
-          <Link to="contact">Contact</Link>
-        </Button>
+        
       </div>
 
       {/* Right Column  */}
