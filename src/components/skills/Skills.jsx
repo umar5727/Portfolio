@@ -18,7 +18,7 @@ const Skills = () => {
     { name: "Tailwind CSS", className: "" },
   ];
   return (
-    <section id="skill" className="pt-20 lg:h-[100vh]">
+    <section id="skill" className="pt-16 lg:h-[100vh]">
       {/* Left Column */}
       <H2 className="text-4xl md:text-6xl font-bold  text-primary text-center">
         <span className="text-black text-3xl md:text-5xl  dark:text-white">

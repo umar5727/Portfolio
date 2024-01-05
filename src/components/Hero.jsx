@@ -22,8 +22,13 @@ const Hero = () => {
       {/* <div className="absolute top-1/2 left-[20%] shadow-[0_0_200px_200px_rgba(0,255,168,0.55)] -z-50"></div> */}
       <div className="lg:w-3/6 flex flex-col gap-8 justify-center items-center text-center lg:text-left lg:items-start md:py-0">
         <h1 className="text-4xl md:text-6xl font-bold  text-primary font-serif lg:mt-9">
-          <span className="text-black dark:text-white text-3xl md:text-5xl ">Hy! I'm </span> <br />
-          <div className="relative pt-2 drop-shadow-[1px_1px_rgba(255,255,255,9.5)]">Umar Khan</div>
+          <span className="text-black dark:text-white text-3xl md:text-5xl ">
+            Hy! I'm{" "}
+          </span>{" "}
+          <br />
+          <div className="relative pt-2 drop-shadow-[1px_1px_rgba(255,255,255,9.5)]">
+            Umar Khan
+          </div>
         </h1>
         <p className="text-lg md:text-xl font-bold text-primary dark:!text-lightgray">
           A dedicated React.js Developer with a passion for crafting dynamic and
@@ -65,14 +70,14 @@ const Hero = () => {
       </div>
 
       {/* Right Column - Full Image */}
-      
+
       <div className="lg:w-3/6 flex justify-center relative ">
-        
         {/* small cards starts  */}
         <SmallCard
           icon={faReact}
           iconStyle="text-[#00d1f7]"
-          className="absolute top-5 -right-10"
+          className="absolute top-5 -right-10 "
+          transition="duration-500 hover:rotate-90"
         />
         <SmallCard
           icon={faHtml5}
@@ -84,7 +89,7 @@ const Hero = () => {
           iconStyle="text-blue-600"
           className="absolute top-40 right-20"
         />
-         {/* <SmallCard
+        {/* <SmallCard
           icon={}
           iconStyle="text-blue-600"
           className="absolute top-40 right-20"

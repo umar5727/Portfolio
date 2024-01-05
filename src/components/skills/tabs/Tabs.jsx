@@ -45,17 +45,17 @@ const Tabs = () => {
     // console.log(index);
   };
   return (
-    <section className="mt-10 mb-12 h-[70%] flex flex-col gap-6 lg:gap-0 lg:flex-row ">
+    <section className="mt-10 mb-12 h-[70%] flex flex-col gap-6 lg:gap-0 lg:flex-row text-primary dark:text-white">
       <div className="lg:w-3/6 py-8  flex flex-col gap-8 justify-center items-center text-center lg:text-left lg:items-start md:py-0 md:pr-10">
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-2 w-full lg:justify-center bg-primary-light py-4 rounded-lg text-primary `}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-5 w-full lg:justify-center py-4 rounded-lg text-primary `}
         >
           {skills.map((item, index) => (
             <Button
               className={
                 index === tabState
-                  ? " text-white bg-primary font-semibold border-none cursor-auto"
-                  : "bg-transparent font-semibold hover:text-black hover:bg-primary-light border-none"
+                  ? "text-2xl text-white bg-primary font-semibold border-none cursor-auto py-5 border-2 border-primary"
+                  : "text-2xl bg-transparent font-semibold py-5 border-2 border-primary hover:text-black hover:bg-primary-light "
               }
               key={index}
               onClick={() => handleClick(index)}
@@ -66,24 +66,24 @@ const Tabs = () => {
         </div>
       </div>
       {/* content starts  */}
-      <div className="lg:w-3/6 flex justify-center relative border-[5px] border-primary rounded-lg ">
+      <div className="lg:w-3/6 flex justify-center relative border-[4px] border-primary rounded-lg ">
         <div className="flex w-full flex-col gap-6 py-2  justify-start">
           {skills.map((title, index) => {
             if (index === tabState) {
               return (
                 <div key={index}>
-                  <div className="text-2xl border-b-[5px] border-primary pb-2 px-5">
+                  <div className="text-2xl border-b-[4px] border-primary pb-3 pt-2 px-10 mb-1">
                     {title.title}
                   </div>
 
                   {title.content.map((item) => {
                     return (
-                      <div key={item.id} className="relative px-5 pt-5">
-                        <h2>
+                      <div key={item.id} className="relative px-10 pt-5">
+                        <h2 className="text-lg font-semibold">
                           {item.name}
                           <span
                             className="absolute "
-                            style={{ left: `${item.experties - 8}%` }}
+                            style={{ left: `${item.experties - 9}%` }}
                           >
                             {item.experties}%
                           </span>
