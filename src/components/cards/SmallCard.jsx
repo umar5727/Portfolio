@@ -9,7 +9,7 @@ const SmallCard = ({
   image = "",
   transition = "hover:-translate-y-2",
 }) => {
-  console.log(image);
+  
   return (
     <div
       className={`w-[52px] h-[52px] flex items-center justify-center border rounded-lg ${className} cursor-text z-50`}
