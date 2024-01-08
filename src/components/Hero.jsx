@@ -5,7 +5,10 @@ import React from "react";
 import Button from "./button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBootstrap,
   faCss3,
+  faCss3Alt,
+  faFontAwesome,
   faGithub,
   faHtml5,
   faInstagram,
@@ -31,8 +34,8 @@ const Hero = () => {
           </div>
         </h1>
         <p className="text-lg md:text-xl font-bold text-primary dark:!text-lightgray">
-          A dedicated React.js Developer with a passion for crafting dynamic and
-          efficient web applications. I bring ideas to life through the power of
+          
+          A graduate and a certified frontend web developer, I offer web development services using React. I bring ideas to life through the power of
           React.js.
         </p>
         {/* discription ends  */}
@@ -85,15 +88,26 @@ const Hero = () => {
           className="absolute top-10 right-20"
         />
         <SmallCard
-          icon={faCss3}
+          icon={faFontAwesome }
           iconStyle="text-blue-600"
           className="absolute top-40 right-20"
         />
-        {/* <SmallCard
-          icon={}
+        <SmallCard
+          icon={faBootstrap}
+          iconStyle="text-purple-600"
+          className="absolute top-30 right-40"
+        />
+        <SmallCard
+          icon={faCss3Alt}
           iconStyle="text-blue-600"
-          className="absolute top-40 right-20"
-        /> */}
+          className="absolute top-60 right-20"
+        />
+
+        <SmallCard
+          image='javascript.svg'
+          iconStyle="text-blue-600"
+          className="absolute top-40 right-1"
+        />
         {/* small cards ends  */}
 
         <div className="relative  ">
@@ -101,7 +115,7 @@ const Hero = () => {
             <img
               src="figure2.svg"
               alt=""
-              className="w-full h-full z-0 relative"
+              className="w-full h-full -z-50 relative"
             />
           </figure>
           <img

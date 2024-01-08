@@ -38,6 +38,7 @@ export default {
         'custom': '0 0 20px 0px rgba(29,58,83,0.15)',
         'more': '0 2 20px rgba(29,58,83,0.25)',
         'custom3': '0 0 5px rgba(29,58,83,0.35), -1px -1px 5px rgba(29,58,83,0.35)',
+        'glowShadow':'inset 0 0 10px #f5f5f5, inset 2px 0 10px rgb(0, 255, 170), inset -2px 0 15px #0ff, inset 2px 0 20px rgb(0, 255, 170), inset -2px 0 50px rgb(0, 221, 255), 0 0 20px #fff, -5px 0 20px rgb(0,255,170), 5px 0 20px #0ff;',
       },
     },
   },
