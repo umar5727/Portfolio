@@ -29,7 +29,7 @@ const Services = () => {
 
       {/* Right Column  */}
       <div className="lg:w-full flex justify-center relative ">
-        <div className="w-full lg:w-5/6 grid justify-center md: md:grid-cols-3 gap-5 pt-[80px]">
+        <div className="w-full lg:w-5/6 grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 pt-[80px]">
           <Card
             title="Figma to React.js"
             para="I can convert your Figma design or any other design or idea into React.js website."
